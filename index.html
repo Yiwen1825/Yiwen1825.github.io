@@ -152,6 +152,36 @@
       <div class="w-full">
         
           <div class="post-item group border-b border-b-hacker-color3 ">
+            <a href="/2025/04/08/2024picoCTF_Reverse/" class="block py-2 px-8 group-hover:bg-hacker-hover-color space-y-4">
+              <h2 class="post-title text-hacker-color1 group-hover:text-white font-bold text-2xl">
+                2024picoCTF Reverse writeups
+              </h2>
+              <p class="post-meta text-hacker-color3 text-sm group-hover:text-white">
+                2025-04-08
+              </p>
+              <p class="post-excerpt text-hacker-color3 group-hover:text-white">
+                2024 picoCTFReverse EngineeringWinAntiDbg0x100題目說明
+
+hint: Hints will be displayed to the Debug console. Good luck!
+
+
+
+執行下來發現他叫我using a debugger
+
+slove
+進到IDA中看看哪裡會輸出flag
+發現這裡是判斷會不會輸出flag的地方
+在jz short loc_C6161B設中斷點
+使用Debugger功能執行
+會發現直接執行後輸出:
+也就是說沒嘗試bypass不會跳到輸出flag的地方
+回去看看上面跳轉的條件
+call ds:IsDebuggerPr...
+              </p>
+            </a>
+          </div>
+        
+          <div class="post-item group border-b border-b-hacker-color3 ">
             <a href="/2025/04/07/Machine-Learning/" class="block py-2 px-8 group-hover:bg-hacker-hover-color space-y-4">
               <h2 class="post-title text-hacker-color1 group-hover:text-white font-bold text-2xl">
                 Machine Learning
@@ -161,7 +191,11 @@
               </p>
               <p class="post-excerpt text-hacker-color3 group-hover:text-white">
                 機器學習
-BY y1w3n 隨手記版本
+BY y1w3n
+
+
+
+隨手記版本
 
 定義問題-&amp;gt;蒐集資料-&amp;gt;資料分析-&amp;gt;處理資料集-&amp;gt;訓練模型-&amp;gt;推論和預測
 名詞
@@ -194,7 +228,7 @@ for監督式學習
 非監督式學習
 
 不提供目標變數(正確答案)
-所以就要去分析輸入的資...
+所以就要去分析輸...
               </p>
             </a>
           </div>
@@ -265,6 +299,11 @@ Run server1$ hexo ser...
           <h3 class="text-hacker-color1 font-bold text-lg">Categories</h3>
           <div>
             
+              <a href="http://yiwen1825.github.io/categories/writeup/" class="text-hacker-color3 hover:text-white">
+                writeup (1)
+              </a>
+              <br />
+            
               <a href="http://yiwen1825.github.io/categories/note/" class="text-hacker-color3 hover:text-white">
                 note (1)
               </a>
@@ -290,6 +329,11 @@ Run server1$ hexo ser...
           <!-- 標籤部分 -->
           <h3 class="text-hacker-color1 font-bold text-lg">Tags</h3>
           <div class="flex flex-wrap justify-start items-center">
+            
+              <a href="http://yiwen1825.github.io/tags/picoCTF-Reverse/" class="text-hacker-color3 hover:bg-hacker-hover-color hover:text-white block border border-hacker-color3 hover:border-dotted rounded-sm py-0.5 px-2 mr-4 mb-2">
+                picoCTF, Reverse <sub>1</sub>
+              </a>
+              <br />
             
               <a href="http://yiwen1825.github.io/tags/AI/" class="text-hacker-color3 hover:bg-hacker-hover-color hover:text-white block border border-hacker-color3 hover:border-dotted rounded-sm py-0.5 px-2 mr-4 mb-2">
                 AI <sub>1</sub>

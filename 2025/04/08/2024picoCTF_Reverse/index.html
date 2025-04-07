@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    p{
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+        font-size: 1.1rem;
+    }
+    figure{
+        margin: 0 !important;
+    }
+    pre{
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    td{
+        padding: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+        #middle-box{
+            min-width: 56rem;
+        }
+    
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>y1w3n&#39;s blog - 2024picoCTF Reverse writeups</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/toc.css">
+    
+<header class="bg-black text-hacker-white py-4 font-dos font-extrabold">
+    <div class="container mx-auto flex items-center justify-between space-x-8">
+    
+      <h1 class="text-2xl font-bold ml-[100px] md:ml-0 animate-pulse text-hacker-color1 md:mr-[20%]">
+        <a href="/" class="hover:text-white transition-colors select-none">
+          y1w3n&#39;s blog
+        </a>
+      </h1>
+  
+    <!-- 大螢幕 -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          
+            <li>
+              <a href="/" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Home
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Archives
+              </a>
+            </li>
+          
+            <li>
+              <a href="/categories" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Categories
+              </a>
+            </li>
+          
+            <li>
+              <a href="/tags" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Tags
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                About
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+  
+      <!-- 小螢幕 -->
+      <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- 摺疊菜單 -->
+    <nav id="mobile-menu" class="hidden bg-black">
+      <ul class="space-y-2 py-4 px-6">
+        
+          <li>
+            <a href="/" class="block text-white hover:text-hacker-color1 transition-colors">
+              Home
+            </a>
+          </li>
+        
+          <li>
+            <a href="/archives" class="block text-white hover:text-hacker-color1 transition-colors">
+              Archives
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories" class="block text-white hover:text-hacker-color1 transition-colors">
+              Categories
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags" class="block text-white hover:text-hacker-color1 transition-colors">
+              Tags
+            </a>
+          </li>
+        
+          <li>
+            <a href="/about" class="block text-white hover:text-hacker-color1 transition-colors">
+              About
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+    <!-- RSS Link -->
+    <link rel="alternate" type="application/rss+xml" title=" RSS" href="/rss.xml" />
+  </header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/search.js"></script>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.remove("hidden");
+        } else {
+        mobileMenu.classList.add("hidden");
+        }
+    });
+    });
+
+  </script>
+  
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="bg-black text-hacker-color3 container mx-auto" style="overflow-x:hidden">
+    <!-- 文章標題 -->
+    <h1 class="text-5xl text-hacker-color1 font-bold font-dos my-6 text-center">2024picoCTF Reverse writeups</h1>
+
+    <!-- 發布時間 -->
+    <p class="text-hacker-color3 text-center text-sm mb-4">
+        2025-04-08
+    </p>
+
+    <!-- 文章内容 -->
+    <div id="article-content" class="article-entry prose prose-invert mx-auto max-w-4xl leading-relaxed highlight" style="display: flex;">
+        <div id="middle-box">
+            <h1 id="2024-picoCTF"><a href="#2024-picoCTF" class="headerlink" title="2024 picoCTF"></a>2024 picoCTF</h1><h2 id="Reverse-Engineering"><a href="#Reverse-Engineering" class="headerlink" title="Reverse Engineering"></a>Reverse Engineering</h2><h3 id="WinAntiDbg0x100"><a href="#WinAntiDbg0x100" class="headerlink" title="WinAntiDbg0x100"></a>WinAntiDbg0x100</h3><h4 id="題目說明"><a href="#題目說明" class="headerlink" title="題目說明"></a>題目說明</h4><p><img src="https://hackmd.io/_uploads/rJdz9CkTC.png" alt="image"></p>
+<blockquote>
+<p>hint: Hints will be displayed to the Debug console. Good luck!</p>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/rJEDoDA3A.png" alt="image"></p>
+<ul>
+<li>執行下來發現他叫我using a debugger</li>
+</ul>
+<h4 id="slove"><a href="#slove" class="headerlink" title="slove"></a>slove</h4><ul>
+<li>進到IDA中看看哪裡會輸出flag</li>
+<li>發現這裡是判斷會不會輸出flag的地方<br><img src="https://hackmd.io/_uploads/Byo4WIyaA.png" alt="image"></li>
+<li>在<code>jz short loc_C6161B</code>設中斷點</li>
+<li>使用Debugger功能執行</li>
+<li>會發現直接執行後輸出:<br><img src="https://hackmd.io/_uploads/HJBoArJaC.png" alt="image"></li>
+<li>也就是說沒嘗試bypass不會跳到輸出flag的地方</li>
+<li>回去看看上面跳轉的條件<br><img src="https://hackmd.io/_uploads/HJEByLJpA.png" alt="image"><ul>
+<li><code>call ds:IsDebuggerPresent</code>: 偵測有沒有debugger存在，沒有的話就return 0</li>
+<li><code>test eax, eax</code>: 概念和AND eax,eax差不多，不一樣的是test不會改變eax。<mark>現在我們有使用debugger所以值不為0</mark><br><img src="https://hackmd.io/_uploads/SJMWQ816C.png" alt="image"></li>
+<li><code>jz</code>: 如果為0則跳轉到輸出flag的地方</li>
+</ul>
+</li>
+<li>把eax值改成0<br><img src="https://hackmd.io/_uploads/BkPPX8yaA.png" alt="image"></li>
+<li>成功跳轉，得到答案<br><img src="https://hackmd.io/_uploads/BkvbNLJa0.png" alt="image"></li>
+</ul>
+<h4 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h4><p><code>picoCTF&#123;d3bug_f0r_th3_Win_0x100_cc0ff664&#125;</code></p>
+<h3 id="WinAntiDbg0x200"><a href="#WinAntiDbg0x200" class="headerlink" title="WinAntiDbg0x200"></a>WinAntiDbg0x200</h3><h4 id="題目說明-1"><a href="#題目說明-1" class="headerlink" title="題目說明"></a>題目說明</h4><p><img src="https://hackmd.io/_uploads/BkByIIJpR.png" alt="image"></p>
+<blockquote>
+<p>hints: Hints will be displayed to the Debug console. Good luck!</p>
+</blockquote>
+<ul>
+<li>使用管理員權限執行<br><img src="https://hackmd.io/_uploads/HkecsU1pR.png" alt="image"></li>
+<li>跟前一題一樣要用debugger</li>
+</ul>
+<h4 id="slove-1"><a href="#slove-1" class="headerlink" title="slove"></a>slove</h4><ul>
+<li>一開始有先判斷是否為管理員權限執行<br><img src="https://hackmd.io/_uploads/By04Vak60.png" alt="image"></li>
+<li>先看看哪裡的執行步驟會前往不輸出flag的路線<br><img src="https://hackmd.io/_uploads/rJ6oVp1pA.png" alt="image"><ul>
+<li><code>test edx, edx</code>：測試 edx 是否為零</li>
+<li><code>jnz short loc_F11832</code>：如果結果為<mark>非零</mark>，則跳轉到<code>loc_F11832</code></li>
+<li><code>loc_F11832</code>: 輸出### Oops! The debugger was detected. Try to bypass</li>
+<li><strong>現在edx為1，1!&#x3D;0，會前往<code>loc_F11832</code>輸出錯誤</strong><br><img src="https://hackmd.io/_uploads/HykCvaya0.png" alt="image"></li>
+</ul>
+</li>
+<li>修改其值，成功前往下一步<br><img src="https://hackmd.io/_uploads/r1hSuaJTA.png" alt="image"></li>
+<li>繼續往下看發現還有檢查是否在Debugger執行<br><img src="https://hackmd.io/_uploads/H1hTupk60.png" alt="image"><ul>
+<li><code>call ds:IsDebuggerPresent</code>: 回傳值0（如果沒有Debugger）或 1（如果有Debugger）</li>
+<li>現在eax值為1</li>
+<li><code>jz short loc_F11847</code>: 如果為0則跳轉到輸出flag的地方</li>
+</ul>
+</li>
+<li>跟前一題一樣，修改eax暫存器值<br><img src="https://hackmd.io/_uploads/ByZ-ZAka0.png" alt="image"></li>
+<li>得到答案<br><img src="https://hackmd.io/_uploads/SyQBbCkpA.png" alt="image"></li>
+</ul>
+<h4 id="Answer-1"><a href="#Answer-1" class="headerlink" title="Answer"></a>Answer</h4><p><code>picoCTF&#123;0x200_debug_f0r_Win_c6db2768&#125;</code></p>
+
+        </div>
+        
+            <div class="post-container">
+            <aside class="toc-container">
+                <button class="toc-toggle">文章目錄</button>
+                <nav class="toc" id="toc"></nav>
+            </aside>
+        </div>
+        
+    </div>
+
+
+    <!-- 返回主頁連結 -->
+    <div class="text-center my-8">
+        <a href="/" class="text-hacker-color1 underline hover:text-hacker-color2">← Back to Home</a>
+    </div>
+
+      
+      <script src="/js/toc.js"></script>  <!-- 引入 TOC 邏輯 -->
+      
+      
+
+    <footer class="bg-black text-gray-400 py-4">
+    <div class="container mx-auto text-center">
+      <p>© <span id="current-year"></span>  Yiwen 
+        <br> Powered by <a class="hover:text-white duration-150 hover:underline decoration-slice" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a class="hover:text-white duration-150 hover:underline decoration-slice" target="_blank" rel="noopener" href="https://github.com/m310ct/hexo-theme-hexploit">Hexpolit</a></p>
+        <br> 這個blog運行了 <span id="running-time"></span>
+    </div>
+  </footer>
+  
+  <script> 
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+  
+  <script src="/js/timer.js"></script>
+
+</body>
+</html>
