@@ -11,6 +11,15 @@ pre code.hljs {
   code.hljs {
     padding: 3px 5px
   }
+
+/* 行號樣式 */
+.highlight .gutter pre {
+  line-height: 2.69; /* 與 .prose pre 的行高一致 */
+  padding: 0 5px;         /* 行號的左右內邊距 */
+  text-align: left;      /* 行號左對齊 */
+  color: #5c6370;         /* 行號顏色，與主題一致 */
+}
+
   /*
   
   Atom One Dark by Daniel Gamage
