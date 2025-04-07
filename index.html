@@ -10,7 +10,7 @@
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body class="bg-black">
-  <!-- 顶部导航栏 -->
+  <!-- 頂部導航欄 -->
   <div class="sticky top-0 z-50">
     
 <header class="bg-black text-hacker-white py-4 font-dos font-extrabold">
@@ -22,7 +22,7 @@
         </a>
       </h1>
   
-    <!-- 大屏幕 -->
+    <!-- 大螢幕 -->
       <nav class="hidden md:block">
         <ul class="flex space-x-6">
           
@@ -59,7 +59,7 @@
         </ul>
       </nav>
   
-      <!-- 小屏幕 -->
+      <!-- 小螢幕 -->
       <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -67,7 +67,7 @@
       </button>
     </div>
   
-    <!-- 折叠菜单 -->
+    <!-- 摺疊菜單 -->
     <nav id="mobile-menu" class="hidden bg-black">
       <ul class="space-y-2 py-4 px-6">
         
@@ -130,7 +130,7 @@
   </div>
   
   <main class="w-screen min-h-screen container mx-auto">
-    <!-- 欢迎页面 -->
+    <!-- 歡迎頁面 -->
     <div class="min-h-screen bg-black text-center flex flex-col justify-center items-center h-screen">
         <h1 class="
         text-hacker-color2 font-dos md:text-huge text-3xl text-wrap animate-bounce select-none bg-red-400 md:min-h-[5rem] md:leading-[5rem] 
@@ -140,16 +140,64 @@
         
         <p class="text-hacker-color2 md:mt-40 mt-20 md:text-2xl text-lg text-wrap font-dos w-[70%] select-none">一個正在學資訊的人</p>
 
-        <!-- 下拉按钮 -->
+        <!-- 下拉按鈕 -->
         <svg id="down-btn" class="icon w-16 h-16 absolute top-[75%] hover:-translate-y-1 transition-all cursor-pointer" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#bbbbbb">
           <path d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z"></path>
         </svg>
     </div>
 
-    <!-- 博客文章与侧边栏 -->
+    <!-- 博客文章與側邊欄 -->
     <div class="min-h-screen flex gap-8" id="scr-target">
       <!-- 文章部分 -->
       <div class="w-full">
+        
+          <div class="post-item group border-b border-b-hacker-color3 ">
+            <a href="/2025/04/07/Machine-Learning/" class="block py-2 px-8 group-hover:bg-hacker-hover-color space-y-4">
+              <h2 class="post-title text-hacker-color1 group-hover:text-white font-bold text-2xl">
+                Machine Learning
+              </h2>
+              <p class="post-meta text-hacker-color3 text-sm group-hover:text-white">
+                2025-04-07
+              </p>
+              <p class="post-excerpt text-hacker-color3 group-hover:text-white">
+                機器學習
+BY y1w3n 隨手記版本
+
+定義問題-&amp;gt;蒐集資料-&amp;gt;資料分析-&amp;gt;處理資料集-&amp;gt;訓練模型-&amp;gt;推論和預測
+名詞
+監督式學習
+
+透過特徵跟目標變數(正確答案)來學習
+KNN
+分類器
+資料放進去之後找離它最近的K筆資料，結果就會推測在被選中的K筆資料中找多的(分類)或平均(回歸)
+
+
+
+
+決策樹
+一棵可用於決策分類的樹形分類器
+
+
+回歸 ： 預測有意義的數值
+for監督式學習
+有意義的數值(例：鞋子尺寸23.5cm、24cm…)
+沒意義的數值(例：性別男視為0、女視為1)
+
+
+分類
+
+
+
+
+
+非監督式學習
+
+不提供目標變數(正確答案)
+所以就要去分析輸入的資...
+              </p>
+            </a>
+          </div>
         
           <div class="post-item group border-b border-b-hacker-color3 ">
             <a href="/2025/04/05/hello-world/" class="block py-2 px-8 group-hover:bg-hacker-hover-color space-y-4">
@@ -172,7 +220,7 @@ Run server1$ hexo ser...
       </div>
       
 
-      <!-- 侧边部分 -->
+      <!-- 側邊部分 -->
       
     <div class="w-1/3 hidden md:block space-y-4 mt-8">
       
@@ -194,7 +242,7 @@ Run server1$ hexo ser...
         
   
         
-          <!-- 公告栏 -->
+          <!-- 公告欄 -->
           <div class=" text-white p-4 rounded-md border-2 border-dashed border-line-color mb-4">
             <h3 class="font-bold text-lg text-hacker-color1">Notice</h3>
             <p class="mt-4">早安，歡迎交流!</p>
@@ -213,7 +261,7 @@ Run server1$ hexo ser...
         
   
         
-          <!-- 分类部分 -->
+          <!-- 分類部分 -->
           <h3 class="text-hacker-color1 font-bold text-lg">Categories</h3>
           <div>
             
@@ -234,9 +282,14 @@ Run server1$ hexo ser...
         
   
         
-          <!-- 标签部分 -->
+          <!-- 標籤部分 -->
           <h3 class="text-hacker-color1 font-bold text-lg">Tags</h3>
           <div class="flex flex-wrap justify-start items-center">
+            
+              <a href="http://yiwen1825.github.io/tags/note/" class="text-hacker-color3 hover:bg-hacker-hover-color hover:text-white block border border-hacker-color3 hover:border-dotted rounded-sm py-0.5 px-2 mr-4 mb-2">
+                note <sub>1</sub>
+              </a>
+              <br />
             
             
           </div>
@@ -255,7 +308,7 @@ Run server1$ hexo ser...
         
   
         
-          <!-- 链接部分 -->
+          <!-- link部分 -->
           <h3 class="text-hacker-color1 font-bold text-lg">Links</h3>
           <div>
             
@@ -289,7 +342,7 @@ Run server1$ hexo ser...
     </div>
   </main>
 
-  <!-- 页脚 -->
+  <!-- 頁腳 -->
   <footer class="bg-black text-gray-400 py-4">
     <div class="container mx-auto text-center">
       <p>© <span id="current-year"></span>  Yiwen 
