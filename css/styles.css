@@ -8,4 +8,15 @@
     font-weight: normal;
     font-style: normal;
   }
+/* 選取文字的樣式 */
+::selection {
+  background: #6b7280; /* 灰色背景（使用你的主題色 gray-500） */
+  color: #ffffff;      /* 白色文字 */
+}
+
+/* Firefox 兼容性 */
+::-moz-selection {
+  background: #6b7280;
+  color: #ffffff;
+}
   
