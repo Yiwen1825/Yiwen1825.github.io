@@ -1,27 +1,29 @@
 function getBlogRunningTime() {
-    // 設定博客創建日期（自行替換為你的日期）
-    const startDate = new Date("2025-04-05"); // 例如 2023年1月1日
+    const startDate = new Date("2025-04-05");
     const currentDate = new Date();
-    
-    // 計算時間差（毫秒）
-    const timeDiff = currentDate - startDate;
-    
-    // 轉換為天、月、年
-    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    const years = Math.floor(days / 365);
-    const months = Math.floor((days % 365) / 30);
-    const remainingDays = days % 30;
-    
-    // 更新到頁面
+
+    let years = currentDate.getFullYear() - startDate.getFullYear();
+    let months = currentDate.getMonth() - startDate.getMonth();
+    let days = currentDate.getDate() - startDate.getDate();
+
+    if (days < 0) {
+        months -= 1;
+        const prevMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+        days += prevMonth.getDate(); // 上個月的天數
+    }
+
+    if (months < 0) {
+        years -= 1;
+        months += 12;
+    }
+
     const timerElement = document.getElementById("running-time");
     if (timerElement) {
-        timerElement.innerHTML = `${years} 年 ${months} 月 ${remainingDays} 天`;
+        timerElement.innerHTML = `${years} 年 ${months} 月 ${days} 天`;
     }
 }
 
-// 頁面加載時執行
 window.onload = function() {
     getBlogRunningTime();
-    // 可選：每秒更新一次
-    setInterval(getBlogRunningTime, 1000);
+    setInterval(getBlogRunningTime, 3600000);
 };
