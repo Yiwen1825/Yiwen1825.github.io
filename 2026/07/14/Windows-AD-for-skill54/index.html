@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    p{
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+        font-size: 1.1rem;
+    }
+    figure{
+        margin: 0 !important;
+    }
+    pre{
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    td{
+        padding: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+        #middle-box{
+            min-width: 56rem;
+        }
+    
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>y1w3n&#39;s blog - Windows AD for skill54</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/toc.css">
+    
+<header class="bg-black text-hacker-white py-4 font-dos font-extrabold">
+    <div class="container mx-auto flex items-center justify-between space-x-8">
+    
+      <h1 class="text-2xl font-bold ml-[100px] md:ml-0 animate-pulse text-hacker-color1 md:mr-[20%]">
+        <a href="/" class="hover:text-white transition-colors select-none">
+          y1w3n&#39;s blog
+        </a>
+      </h1>
+  
+    <!-- 大螢幕 -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          
+            <li>
+              <a href="/" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Home
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Archives
+              </a>
+            </li>
+          
+            <li>
+              <a href="/categories" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Categories
+              </a>
+            </li>
+          
+            <li>
+              <a href="/tags" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Tags
+              </a>
+            </li>
+          
+            <li>
+              <a href="/Friends" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                Friends
+              </a>
+            </li>
+          
+            <li>
+              <a href="/about" class="select-none text-lg hover:text-hacker-color1 transition-all hover:underline decoration-wavy duration-300 text-hacker-color3">
+                About
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+  
+      <!-- 小螢幕 -->
+      <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- 摺疊菜單 -->
+    <nav id="mobile-menu" class="hidden bg-black">
+      <ul class="space-y-2 py-4 px-6">
+        
+          <li>
+            <a href="/" class="block text-white hover:text-hacker-color1 transition-colors">
+              Home
+            </a>
+          </li>
+        
+          <li>
+            <a href="/archives" class="block text-white hover:text-hacker-color1 transition-colors">
+              Archives
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories" class="block text-white hover:text-hacker-color1 transition-colors">
+              Categories
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags" class="block text-white hover:text-hacker-color1 transition-colors">
+              Tags
+            </a>
+          </li>
+        
+          <li>
+            <a href="/Friends" class="block text-white hover:text-hacker-color1 transition-colors">
+              Friends
+            </a>
+          </li>
+        
+          <li>
+            <a href="/about" class="block text-white hover:text-hacker-color1 transition-colors">
+              About
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+    <!-- RSS Link -->
+    <link rel="alternate" type="application/rss+xml" title=" RSS" href="/rss.xml" />
+  </header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/search.js"></script>
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.remove("hidden");
+        } else {
+        mobileMenu.classList.add("hidden");
+        }
+    });
+    });
+
+  </script>
+  
+
+
+    <link rel="icon" href="/yiwen.png">
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="bg-black text-hacker-color3 container mx-auto" style="overflow-x:hidden">
+    <!-- 文章標題 -->
+    <h1 class="text-5xl text-hacker-color1 font-bold font-dos my-6 text-center">Windows AD for skill54</h1>
+
+    <!-- 發布時間 -->
+    <p class="text-hacker-color3 text-center text-sm mb-4">
+        2026-07-14
+    </p>
+
+    <!-- 文章内容 -->
+    <div id="article-content" class="article-entry prose prose-invert mx-auto max-w-4xl leading-relaxed highlight" style="display: flex;">
+        <div id="middle-box">
+            <h1 id="Windows-AD"><a href="#Windows-AD" class="headerlink" title="Windows AD"></a>Windows AD</h1><blockquote>
+<p>全國技能競賽 網路安全<br>note by y1w3n</p>
+</blockquote>
+<hr>
+<h2 id="OUTLINE"><a href="#OUTLINE" class="headerlink" title="OUTLINE"></a>OUTLINE</h2><p>[TOC]</p>
+<h2 id="note-by-AI"><a href="#note-by-AI" class="headerlink" title="note by AI"></a>note by AI</h2><p>:::spoiler claude版本</p>
+<h2 id="階段-1：AD-DS-核心觀念與建置"><a href="#階段-1：AD-DS-核心觀念與建置" class="headerlink" title="階段 1：AD DS 核心觀念與建置"></a>階段 1：AD DS 核心觀念與建置</h2><h3 id="1-1-安裝-AD-DS-角色並晉升第一台-DC"><a href="#1-1-安裝-AD-DS-角色並晉升第一台-DC" class="headerlink" title="1-1 安裝 AD DS 角色並晉升第一台 DC"></a>1-1 安裝 AD DS 角色並晉升第一台 DC</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-WindowsFeature</span> AD<span class="hljs-literal">-Domain-Services</span> <span class="hljs-literal">-IncludeManagementTools</span><br><br><span class="hljs-built_in">Install-ADDSForest</span> `<br>  <span class="hljs-literal">-DomainName</span> <span class="hljs-string">&quot;contoso.local&quot;</span> `<br>  <span class="hljs-literal">-DomainNetbiosName</span> <span class="hljs-string">&quot;CONTOSO&quot;</span> `<br>  <span class="hljs-literal">-ForestMode</span> <span class="hljs-string">&quot;WinThreshold&quot;</span> `<br>  <span class="hljs-literal">-DomainMode</span> <span class="hljs-string">&quot;WinThreshold&quot;</span> `<br>  <span class="hljs-literal">-InstallDns</span>:<span class="hljs-variable">$true</span> `<br>  <span class="hljs-literal">-SafeModeAdministratorPassword</span> (<span class="hljs-built_in">ConvertTo-SecureString</span> <span class="hljs-string">&quot;P@ssw0rd123!&quot;</span> <span class="hljs-literal">-AsPlainText</span> <span class="hljs-literal">-Force</span>)<br></code></pre></td></tr></table></figure>
+<p>完成後自動重開機，重開後用 <code>CONTOSO\Administrator</code> 登入驗證。</p>
+<h3 id="1-2-驗證安裝結果"><a href="#1-2-驗證安裝結果" class="headerlink" title="1-2 驗證安裝結果"></a>1-2 驗證安裝結果</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Get-ADDomain</span><br><span class="hljs-built_in">Get-ADForest</span><br>dcdiag /v<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-3-建立第二台-DC（複寫驗證）"><a href="#1-3-建立第二台-DC（複寫驗證）" class="headerlink" title="1-3 建立第二台 DC（複寫驗證）"></a>1-3 建立第二台 DC（複寫驗證）</h3><p>在 DC2 上先加入網域，再執行：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-WindowsFeature</span> AD<span class="hljs-literal">-Domain-Services</span> <span class="hljs-literal">-IncludeManagementTools</span><br><br><span class="hljs-built_in">Install-ADDSDomainController</span> `<br>  <span class="hljs-literal">-DomainName</span> <span class="hljs-string">&quot;contoso.local&quot;</span> `<br>  <span class="hljs-literal">-InstallDns</span>:<span class="hljs-variable">$true</span> `<br>  <span class="hljs-literal">-Credential</span> (<span class="hljs-built_in">Get-Credential</span> CONTOSO\Administrator) `<br>  <span class="hljs-literal">-SafeModeAdministratorPassword</span> (<span class="hljs-built_in">ConvertTo-SecureString</span> <span class="hljs-string">&quot;P@ssw0rd123!&quot;</span> <span class="hljs-literal">-AsPlainText</span> <span class="hljs-literal">-Force</span>)<br></code></pre></td></tr></table></figure>
+<p>驗證複寫：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell">repadmin /replsummary<br>repadmin /showrepl<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-4-建立子網域（Child-Domain）"><a href="#1-4-建立子網域（Child-Domain）" class="headerlink" title="1-4 建立子網域（Child Domain）"></a>1-4 建立子網域（Child Domain）</h3><p>在新 VM 上：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-ADDSDomainController</span> `<br>  <span class="hljs-literal">-NewDomainName</span> <span class="hljs-string">&quot;child&quot;</span> `<br>  <span class="hljs-literal">-ParentDomainName</span> <span class="hljs-string">&quot;contoso.local&quot;</span> `<br>  <span class="hljs-literal">-DomainType</span> <span class="hljs-string">&quot;ChildDomain&quot;</span> `<br>  <span class="hljs-literal">-InstallDns</span>:<span class="hljs-variable">$true</span> `<br>  <span class="hljs-literal">-Credential</span> (<span class="hljs-built_in">Get-Credential</span> CONTOSO\Administrator) `<br>  <span class="hljs-literal">-SafeModeAdministratorPassword</span> (<span class="hljs-built_in">ConvertTo-SecureString</span> <span class="hljs-string">&quot;P@ssw0rd123!&quot;</span> <span class="hljs-literal">-AsPlainText</span> <span class="hljs-literal">-Force</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-5-FSMO-角色查詢與轉移"><a href="#1-5-FSMO-角色查詢與轉移" class="headerlink" title="1-5 FSMO 角色查詢與轉移"></a>1-5 FSMO 角色查詢與轉移</h3><p>查詢：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">netdom query fsmo<br></code></pre></td></tr></table></figure>
+<p>轉移（在目標 DC 上執行）：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Move-ADDirectoryServerOperationMasterRole</span> <span class="hljs-literal">-Identity</span> <span class="hljs-string">&quot;DC2&quot;</span> `<br>  <span class="hljs-literal">-OperationMasterRole</span> SchemaMaster,DomainNamingMaster,PDCEmulator,RIDMaster,InfrastructureMaster<br></code></pre></td></tr></table></figure>
+<p>若原 DC 已離線，強制奪取（Seize）：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs powershell">ntdsutil<br>  roles<br>  connections<br>  connect to server DC2<br>  quit<br>  seize pdc<br>  quit<br>  quit<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-6-Sites-and-Services"><a href="#1-6-Sites-and-Services" class="headerlink" title="1-6 Sites and Services"></a>1-6 Sites and Services</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">New-ADReplicationSite</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;Taipei-Site&quot;</span><br><span class="hljs-built_in">New-ADReplicationSubnet</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;192.168.10.0/24&quot;</span> <span class="hljs-literal">-Site</span> <span class="hljs-string">&quot;Taipei-Site&quot;</span><br></code></pre></td></tr></table></figure>
+<p>GUI 路徑：<code>Active Directory Sites and Services</code> → 右鍵 Sites → New Site → 設定 Subnet 與站台連結（Site Link）複寫排程（預設 IntersiteReplicationInterval 180 分鐘可依賽題調整）。</p>
+<hr>
+<h2 id="階段-2：使用者與群組管理實作"><a href="#階段-2：使用者與群組管理實作" class="headerlink" title="階段 2：使用者與群組管理實作"></a>階段 2：使用者與群組管理實作</h2><h3 id="2-1-建立-OU"><a href="#2-1-建立-OU" class="headerlink" title="2-1 建立 OU"></a>2-1 建立 OU</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">New-ADOrganizationalUnit</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;IT部門&quot;</span> <span class="hljs-literal">-Path</span> <span class="hljs-string">&quot;DC=contoso,DC=local&quot;</span><br><span class="hljs-built_in">New-ADOrganizationalUnit</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;業務部門&quot;</span> <span class="hljs-literal">-Path</span> <span class="hljs-string">&quot;DC=contoso,DC=local&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-2-CSV-批次建立使用者"><a href="#2-2-CSV-批次建立使用者" class="headerlink" title="2-2 CSV 批次建立使用者"></a>2-2 CSV 批次建立使用者</h3><p>CSV 範例（users.csv）：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-type">Name</span>,SamAccountName,OU,<span class="hljs-keyword">Password</span><br>王小明,wang,OU=IT部門,DC=contoso,DC=<span class="hljs-keyword">local</span>,P@ssw0rd1!<br></code></pre></td></tr></table></figure>
+<p>匯入腳本：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Import-Csv</span> <span class="hljs-string">&quot;C:\users.csv&quot;</span> | <span class="hljs-built_in">ForEach-Object</span> &#123;<br>    <span class="hljs-built_in">New-ADUser</span> <span class="hljs-literal">-Name</span> <span class="hljs-variable">$_</span>.Name `<br>      <span class="hljs-literal">-SamAccountName</span> <span class="hljs-variable">$_</span>.SamAccountName `<br>      <span class="hljs-literal">-Path</span> <span class="hljs-variable">$_</span>.OU `<br>      <span class="hljs-literal">-AccountPassword</span> (<span class="hljs-built_in">ConvertTo-SecureString</span> <span class="hljs-variable">$_</span>.Password <span class="hljs-literal">-AsPlainText</span> <span class="hljs-literal">-Force</span>) `<br>      <span class="hljs-literal">-Enabled</span> <span class="hljs-variable">$true</span> `<br>      <span class="hljs-literal">-ChangePasswordAtLogon</span> <span class="hljs-variable">$true</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-3-批次修改屬性"><a href="#2-3-批次修改屬性" class="headerlink" title="2-3 批次修改屬性"></a>2-3 批次修改屬性</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Get-ADUser</span> <span class="hljs-literal">-Filter</span> &#123;Department <span class="hljs-operator">-eq</span> <span class="hljs-string">&quot;IT&quot;</span>&#125; | <span class="hljs-built_in">Set-ADUser</span> <span class="hljs-literal">-Office</span> <span class="hljs-string">&quot;台北總部&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-4-委派控制"><a href="#2-4-委派控制" class="headerlink" title="2-4 委派控制"></a>2-4 委派控制</h3><p>GUI：右鍵 OU → Delegate Control → 選擇使用者&#x2F;群組 → 勾選要委派的任務（如重設密碼、建立&#x2F;刪除使用者）<br>PowerShell 對應（需 dsacls）：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">dsacls &quot;OU=IT部門,DC=contoso,DC=local&quot; /I:S /G &quot;CONTOSO\HelpDeskGroup:CA;Reset Password;user&quot;<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-5-群組建立與巢狀（AGDLP）"><a href="#2-5-群組建立與巢狀（AGDLP）" class="headerlink" title="2-5 群組建立與巢狀（AGDLP）"></a>2-5 群組建立與巢狀（AGDLP）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">New-ADGroup</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;G_IT_Global&quot;</span> <span class="hljs-literal">-GroupScope</span> Global <span class="hljs-literal">-GroupCategory</span> Security <span class="hljs-literal">-Path</span> <span class="hljs-string">&quot;OU=IT部門,DC=contoso,DC=local&quot;</span><br><span class="hljs-built_in">New-ADGroup</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;DL_Printer_Access&quot;</span> <span class="hljs-literal">-GroupScope</span> DomainLocal <span class="hljs-literal">-GroupCategory</span> Security <span class="hljs-literal">-Path</span> <span class="hljs-string">&quot;OU=IT部門,DC=contoso,DC=local&quot;</span><br><span class="hljs-built_in">Add-ADGroupMember</span> <span class="hljs-literal">-Identity</span> <span class="hljs-string">&quot;DL_Printer_Access&quot;</span> <span class="hljs-literal">-Members</span> <span class="hljs-string">&quot;G_IT_Global&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-6-細緻密碼原則（PSO）"><a href="#2-6-細緻密碼原則（PSO）" class="headerlink" title="2-6 細緻密碼原則（PSO）"></a>2-6 細緻密碼原則（PSO）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">New-ADFineGrainedPasswordPolicy</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;IT-PSO&quot;</span> `<br>  <span class="hljs-literal">-Precedence</span> <span class="hljs-number">10</span> `<br>  <span class="hljs-literal">-MinPasswordLength</span> <span class="hljs-number">12</span> `<br>  <span class="hljs-literal">-PasswordHistoryCount</span> <span class="hljs-number">5</span> `<br>  <span class="hljs-literal">-LockoutThreshold</span> <span class="hljs-number">3</span> `<br>  <span class="hljs-literal">-ComplexityEnabled</span> <span class="hljs-variable">$true</span> `<br>  <span class="hljs-literal">-ReversibleEncryptionEnabled</span> <span class="hljs-variable">$false</span><br><br><span class="hljs-built_in">Add-ADFineGrainedPasswordPolicySubject</span> <span class="hljs-literal">-Identity</span> <span class="hljs-string">&quot;IT-PSO&quot;</span> <span class="hljs-literal">-Subjects</span> <span class="hljs-string">&quot;G_IT_Global&quot;</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="階段-3：GPO（群組原則）"><a href="#階段-3：GPO（群組原則）" class="headerlink" title="階段 3：GPO（群組原則）"></a>階段 3：GPO（群組原則）</h2><h3 id="3-1-建立與連結-GPO"><a href="#3-1-建立與連結-GPO" class="headerlink" title="3-1 建立與連結 GPO"></a>3-1 建立與連結 GPO</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">New-GPO</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;IT部門限制原則&quot;</span> | <span class="hljs-built_in">New-GPLink</span> <span class="hljs-literal">-Target</span> <span class="hljs-string">&quot;OU=IT部門,DC=contoso,DC=local&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3-2-編輯-GPO（GUI）"><a href="#3-2-編輯-GPO（GUI）" class="headerlink" title="3-2 編輯 GPO（GUI）"></a>3-2 編輯 GPO（GUI）</h3><p><code>Group Policy Management</code> → 右鍵 GPO → Edit → 路徑範例：</p>
+<ul>
+<li>登入腳本：User Configuration → Policies → Windows Settings → Scripts (Logon&#x2F;Logoff)</li>
+<li>磁碟機對應：User Configuration → Preferences → Windows Settings → Drive Maps</li>
+<li>資料夾重新導向：User Configuration → Policies → Windows Settings → Folder Redirection</li>
+</ul>
+<h3 id="3-3-安全性篩選（限制套用對象）"><a href="#3-3-安全性篩選（限制套用對象）" class="headerlink" title="3-3 安全性篩選（限制套用對象）"></a>3-3 安全性篩選（限制套用對象）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Set-GPPermission</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;IT部門限制原則&quot;</span> <span class="hljs-literal">-TargetName</span> <span class="hljs-string">&quot;Authenticated Users&quot;</span> <span class="hljs-literal">-TargetType</span> <span class="hljs-built_in">Group</span> <span class="hljs-literal">-PermissionLevel</span> None<br><span class="hljs-built_in">Set-GPPermission</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;IT部門限制原則&quot;</span> <span class="hljs-literal">-TargetName</span> <span class="hljs-string">&quot;G_IT_Global&quot;</span> <span class="hljs-literal">-TargetType</span> <span class="hljs-built_in">Group</span> <span class="hljs-literal">-PermissionLevel</span> GpoApply<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-4-軟體派送"><a href="#3-4-軟體派送" class="headerlink" title="3-4 軟體派送"></a>3-4 軟體派送</h3><p>GPO Edit → Computer Configuration → Policies → Software Settings → Software Installation → New → Package（需 MSI 檔置於共用資料夾，UNC 路徑）</p>
+<h3 id="3-5-強制與封鎖繼承"><a href="#3-5-強制與封鎖繼承" class="headerlink" title="3-5 強制與封鎖繼承"></a>3-5 強制與封鎖繼承</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Set-GPLink</span> <span class="hljs-literal">-Target</span> <span class="hljs-string">&quot;OU=IT部門,DC=contoso,DC=local&quot;</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;IT部門限制原則&quot;</span> <span class="hljs-literal">-Enforced</span> Yes<br><span class="hljs-built_in">Set-GPInheritance</span> <span class="hljs-literal">-Target</span> <span class="hljs-string">&quot;OU=業務部門,DC=contoso,DC=local&quot;</span> <span class="hljs-literal">-IsBlocked</span> Yes<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-6-疑難排解"><a href="#3-6-疑難排解" class="headerlink" title="3-6 疑難排解"></a>3-6 疑難排解</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell">gpupdate /force<br>gpresult /<span class="hljs-built_in">r</span><br>gpresult /<span class="hljs-built_in">h</span> report.html<br></code></pre></td></tr></table></figure>
+<p>GUI：Group Policy Management → 右鍵 OU → Group Policy Modeling（模擬）&#x2F; Group Policy Results（實際套用結果）</p>
+<h3 id="3-7-WMI-篩選器"><a href="#3-7-WMI-篩選器" class="headerlink" title="3-7 WMI 篩選器"></a>3-7 WMI 篩選器</h3><p>GPO Edit 左側 WMI Filters → New → 範例（僅套用於 Windows 10 以上）：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> Win32_OperatingSystem <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">Version</span> &gt;= &quot;10.0&quot;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="階段-4：DNS-整合"><a href="#階段-4：DNS-整合" class="headerlink" title="階段 4：DNS 整合"></a>階段 4：DNS 整合</h2><h3 id="4-1-建立正向-反向區域"><a href="#4-1-建立正向-反向區域" class="headerlink" title="4-1 建立正向&#x2F;反向區域"></a>4-1 建立正向&#x2F;反向區域</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Add-DnsServerPrimaryZone</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;contoso.local&quot;</span> <span class="hljs-literal">-ReplicationScope</span> <span class="hljs-string">&quot;Forest&quot;</span><br><span class="hljs-built_in">Add-DnsServerPrimaryZone</span> <span class="hljs-literal">-NetworkID</span> <span class="hljs-string">&quot;192.168.10.0/24&quot;</span> <span class="hljs-literal">-ReplicationScope</span> <span class="hljs-string">&quot;Forest&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-2-條件式轉寄站"><a href="#4-2-條件式轉寄站" class="headerlink" title="4-2 條件式轉寄站"></a>4-2 條件式轉寄站</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Add-DnsServerConditionalForwarderZone</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;partner.com&quot;</span> <span class="hljs-literal">-MasterServers</span> <span class="hljs-number">10.0</span>.<span class="hljs-number">0.5</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-3-老化清除設定"><a href="#4-3-老化清除設定" class="headerlink" title="4-3 老化清除設定"></a>4-3 老化清除設定</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Set-DnsServerScavenging</span> <span class="hljs-literal">-ScavengingState</span> <span class="hljs-variable">$true</span> <span class="hljs-literal">-ScavengingInterval</span> <span class="hljs-number">7.00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><br><span class="hljs-built_in">Set-DnsServerZoneAging</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;contoso.local&quot;</span> <span class="hljs-literal">-Aging</span> <span class="hljs-variable">$true</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-4-疑難排解"><a href="#4-4-疑難排解" class="headerlink" title="4-4 疑難排解"></a>4-4 疑難排解</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd">nslookup dc1.contoso.local<br>dcdiag /test:dns /v<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="階段-5：DHCP-整合"><a href="#階段-5：DHCP-整合" class="headerlink" title="階段 5：DHCP 整合"></a>階段 5：DHCP 整合</h2><h3 id="5-1-安裝並授權"><a href="#5-1-安裝並授權" class="headerlink" title="5-1 安裝並授權"></a>5-1 安裝並授權</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-WindowsFeature</span> DHCP <span class="hljs-literal">-IncludeManagementTools</span><br><span class="hljs-built_in">Add-DhcpServerInDC</span> <span class="hljs-literal">-DnsName</span> <span class="hljs-string">&quot;dc1.contoso.local&quot;</span> <span class="hljs-literal">-IPAddress</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">10.10</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="5-2-建立範圍"><a href="#5-2-建立範圍" class="headerlink" title="5-2 建立範圍"></a>5-2 建立範圍</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Add-DhcpServerv4Scope</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;IT-Scope&quot;</span> <span class="hljs-literal">-StartRange</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">10.100</span> <span class="hljs-literal">-EndRange</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">10.200</span> <span class="hljs-literal">-SubnetMask</span> <span class="hljs-number">255.255</span>.<span class="hljs-number">255.0</span><br><span class="hljs-built_in">Set-DhcpServerv4OptionValue</span> <span class="hljs-literal">-ScopeId</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">10.0</span> <span class="hljs-literal">-DnsServer</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">10.10</span> <span class="hljs-literal">-DnsDomain</span> <span class="hljs-string">&quot;contoso.local&quot;</span> <span class="hljs-literal">-Router</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">10.1</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="5-3-保留與-Failover"><a href="#5-3-保留與-Failover" class="headerlink" title="5-3 保留與 Failover"></a>5-3 保留與 Failover</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Add-DhcpServerv4Reservation</span> <span class="hljs-literal">-ScopeId</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">10.0</span> <span class="hljs-literal">-IPAddress</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">10.150</span> <span class="hljs-literal">-ClientId</span> <span class="hljs-string">&quot;AA-BB-CC-DD-EE-FF&quot;</span><br><br><span class="hljs-built_in">Add-DhcpServerv4Failover</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;DHCP-Failover&quot;</span> `<br>  <span class="hljs-literal">-PartnerServer</span> <span class="hljs-string">&quot;dc2.contoso.local&quot;</span> `<br>  <span class="hljs-literal">-ScopeId</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">10.0</span> `<br>  <span class="hljs-literal">-LoadBalancePercent</span> <span class="hljs-number">50</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="5-4-安全動態更新（搭配-DNS）"><a href="#5-4-安全動態更新（搭配-DNS）" class="headerlink" title="5-4 安全動態更新（搭配 DNS）"></a>5-4 安全動態更新（搭配 DNS）</h3><p>在 DHCP 範圍 → DNS 標籤 → 勾選「僅在 DHCP 用戶端要求時動態更新」+「僅對安全動態更新使用認證」</p>
+<hr>
+<h2 id="階段-6：進階目錄服務"><a href="#階段-6：進階目錄服務" class="headerlink" title="階段 6：進階目錄服務"></a>階段 6：進階目錄服務</h2><h3 id="6-1-建立信任關係"><a href="#6-1-建立信任關係" class="headerlink" title="6-1 建立信任關係"></a>6-1 建立信任關係</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">netdom trust contoso.local /d:partner.local /add /twoway /UserD:Administrator /PasswordD:*<br></code></pre></td></tr></table></figure>
+
+<h3 id="6-2-AD-回收筒啟用與還原"><a href="#6-2-AD-回收筒啟用與還原" class="headerlink" title="6-2 AD 回收筒啟用與還原"></a>6-2 AD 回收筒啟用與還原</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Enable-ADOptionalFeature</span> <span class="hljs-string">&quot;Recycle Bin Feature&quot;</span> <span class="hljs-literal">-Scope</span> ForestOrConfigurationSet <span class="hljs-literal">-Target</span> <span class="hljs-string">&quot;contoso.local&quot;</span><br><br><span class="hljs-comment"># 誤刪還原</span><br><span class="hljs-built_in">Get-ADObject</span> <span class="hljs-literal">-Filter</span> &#123;displayName <span class="hljs-operator">-eq</span> <span class="hljs-string">&quot;王小明&quot;</span>&#125; <span class="hljs-literal">-IncludeDeletedObjects</span> | <span class="hljs-built_in">Restore-ADObject</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="6-3-RODC-部署"><a href="#6-3-RODC-部署" class="headerlink" title="6-3 RODC 部署"></a>6-3 RODC 部署</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-ADDSDomainController</span> `<br>  <span class="hljs-literal">-DomainName</span> <span class="hljs-string">&quot;contoso.local&quot;</span> `<br>  <span class="hljs-literal">-ReadOnlyReplica</span>:<span class="hljs-variable">$true</span> `<br>  <span class="hljs-literal">-SiteName</span> <span class="hljs-string">&quot;Taipei-Site&quot;</span> `<br>  <span class="hljs-literal">-InstallDns</span>:<span class="hljs-variable">$true</span> `<br>  <span class="hljs-literal">-DelegatedAdministratorAccountName</span> <span class="hljs-string">&quot;CONTOSO\HelpDeskAdmin&quot;</span> `<br>  <span class="hljs-literal">-Credential</span> (<span class="hljs-built_in">Get-Credential</span> CONTOSO\Administrator) `<br>  <span class="hljs-literal">-SafeModeAdministratorPassword</span> (<span class="hljs-built_in">ConvertTo-SecureString</span> <span class="hljs-string">&quot;P@ssw0rd123!&quot;</span> <span class="hljs-literal">-AsPlainText</span> <span class="hljs-literal">-Force</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="6-4-密碼複寫原則（PRP）"><a href="#6-4-密碼複寫原則（PRP）" class="headerlink" title="6-4 密碼複寫原則（PRP）"></a>6-4 密碼複寫原則（PRP）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Add-ADDomainControllerPasswordReplicationPolicy</span> <span class="hljs-literal">-Identity</span> <span class="hljs-string">&quot;RODC1&quot;</span> <span class="hljs-literal">-AllowedList</span> <span class="hljs-string">&quot;G_IT_Global&quot;</span><br><span class="hljs-built_in">Add-ADDomainControllerPasswordReplicationPolicy</span> <span class="hljs-literal">-Identity</span> <span class="hljs-string">&quot;RODC1&quot;</span> <span class="hljs-literal">-DeniedList</span> <span class="hljs-string">&quot;Domain Admins&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="6-5-SYSVOL-複寫狀態確認（DFSR）"><a href="#6-5-SYSVOL-複寫狀態確認（DFSR）" class="headerlink" title="6-5 SYSVOL 複寫狀態確認（DFSR）"></a>6-5 SYSVOL 複寫狀態確認（DFSR）</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd">dfsrmig /getmigrationstate<br>repadmin /showrepl DC1 DC=DomainDnsZones,DC=contoso,DC=local<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="階段-7：憑證與驗證服務"><a href="#階段-7：憑證與驗證服務" class="headerlink" title="階段 7：憑證與驗證服務"></a>階段 7：憑證與驗證服務</h2><h3 id="7-1-安裝企業-CA"><a href="#7-1-安裝企業-CA" class="headerlink" title="7-1 安裝企業 CA"></a>7-1 安裝企業 CA</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-WindowsFeature</span> AD<span class="hljs-literal">-Certificate</span> <span class="hljs-literal">-IncludeManagementTools</span><br><span class="hljs-built_in">Install-AdcsCertificationAuthority</span> `<br>  <span class="hljs-literal">-CAType</span> EnterpriseRootCA `<br>  <span class="hljs-literal">-CryptoProviderName</span> <span class="hljs-string">&quot;RSA#Microsoft Software Key Storage Provider&quot;</span> `<br>  <span class="hljs-literal">-KeyLength</span> <span class="hljs-number">2048</span> `<br>  <span class="hljs-literal">-HashAlgorithmName</span> SHA256 `<br>  <span class="hljs-literal">-ValidityPeriod</span> Years <span class="hljs-literal">-ValidityPeriodUnits</span> <span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="7-2-憑證範本與自動註冊"><a href="#7-2-憑證範本與自動註冊" class="headerlink" title="7-2 憑證範本與自動註冊"></a>7-2 憑證範本與自動註冊</h3><p>GUI：<code>certtmpl.msc</code> → 複製範本（如 User）→ 設定屬性 → 發佈於 CA（<code>certsrv.msc</code> → 憑證範本 → 新增要發行的範本）<br>GPO 設定自動註冊：Computer&#x2F;User Configuration → Policies → Windows Settings → Security Settings → Public Key Policies → Certificate Services Client - Auto-Enrollment → Enabled</p>
+<h3 id="7-3-NPS（RADIUS-802-1X）"><a href="#7-3-NPS（RADIUS-802-1X）" class="headerlink" title="7-3 NPS（RADIUS &#x2F; 802.1X）"></a>7-3 NPS（RADIUS &#x2F; 802.1X）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-WindowsFeature</span> NPAS <span class="hljs-literal">-IncludeManagementTools</span><br></code></pre></td></tr></table></figure>
+<p>GUI：<code>nps.msc</code> → RADIUS Clients and Servers → New RADIUS Client（輸入交換器 IP + 共用密鑰）→ Policies → Network Policies → New（設定條件如群組成員 + 驗證方法 PEAP）</p>
+<hr>
+<h2 id="階段-8：備份、還原與災難復原"><a href="#階段-8：備份、還原與災難復原" class="headerlink" title="階段 8：備份、還原與災難復原"></a>階段 8：備份、還原與災難復原</h2><h3 id="8-1-System-State-備份"><a href="#8-1-System-State-備份" class="headerlink" title="8-1 System State 備份"></a>8-1 System State 備份</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-WindowsFeature</span> Windows<span class="hljs-literal">-Server-Backup</span><br>wbadmin <span class="hljs-built_in">start</span> systemstatebackup <span class="hljs-literal">-backupTarget</span>:E: <span class="hljs-literal">-quiet</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="8-2-進入-DSRM"><a href="#8-2-進入-DSRM" class="headerlink" title="8-2 進入 DSRM"></a>8-2 進入 DSRM</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd">bcdedit /<span class="hljs-built_in">set</span> safeboot dsrepair<br>shutdown /r /t <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+<p>（還原正常開機記得執行 <code>bcdedit /deletevalue safeboot</code>）</p>
+<h3 id="8-3-授權還原（Authoritative-Restore）"><a href="#8-3-授權還原（Authoritative-Restore）" class="headerlink" title="8-3 授權還原（Authoritative Restore）"></a>8-3 授權還原（Authoritative Restore）</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cmd">ntdsutil<br>  activate instance ntds<br>  authoritative <span class="hljs-built_in">restore</span><br>  <span class="hljs-built_in">restore</span> subtree &quot;OU=IT部門,DC=contoso,DC=local&quot;<br>  quit<br>  quit<br></code></pre></td></tr></table></figure>
+<p>配合 <code>wbadmin start systemstaterecovery -version:&lt;版本&gt; -backupTarget:E:</code> 先還原再執行授權還原。</p>
+<hr>
+<h2 id="階段-9：安全性強化"><a href="#階段-9：安全性強化" class="headerlink" title="階段 9：安全性強化"></a>階段 9：安全性強化</h2><h3 id="9-1-LAPS-部署"><a href="#9-1-LAPS-部署" class="headerlink" title="9-1 LAPS 部署"></a>9-1 LAPS 部署</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-Module</span> AdmPwd.PS<br><span class="hljs-built_in">Update-AdmPwdADSchema</span><br><span class="hljs-built_in">Set-AdmPwdComputerSelfPermission</span> <span class="hljs-literal">-OrgUnit</span> <span class="hljs-string">&quot;OU=Clients,DC=contoso,DC=local&quot;</span><br></code></pre></td></tr></table></figure>
+<p>GPO：安裝 LAPS GPO 範本後設定 Computer Configuration → Policies → Administrative Templates → LAPS → 啟用密碼管理</p>
+<h3 id="9-2-進階安全性稽核"><a href="#9-2-進階安全性稽核" class="headerlink" title="9-2 進階安全性稽核"></a>9-2 進階安全性稽核</h3><p>GPO：Computer Configuration → Policies → Windows Settings → Security Settings → Advanced Audit Policy Configuration → 啟用「帳戶登入」「目錄服務存取」等子類別</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">auditpol /<span class="hljs-built_in">set</span> /subcategory:<span class="hljs-string">&quot;Directory Service Access&quot;</span> /success:enable /failure:enable<br></code></pre></td></tr></table></figure>
+
+<h3 id="9-3-安全性基準套用"><a href="#9-3-安全性基準套用" class="headerlink" title="9-3 安全性基準套用"></a>9-3 安全性基準套用</h3><p>下載 Microsoft Security Compliance Toolkit → 使用 LGPO.exe 匯入基準 GPO 至 SYSVOL，或用 GPMC 匯入既有 GPO 備份。</p>
+<hr>
+<h2 id="階段-10：PowerShell-自動化"><a href="#階段-10：PowerShell-自動化" class="headerlink" title="階段 10：PowerShell 自動化"></a>階段 10：PowerShell 自動化</h2><h3 id="10-1-常用指令速查"><a href="#10-1-常用指令速查" class="headerlink" title="10-1 常用指令速查"></a>10-1 常用指令速查</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Get-ADUser</span> <span class="hljs-literal">-Filter</span> * <span class="hljs-literal">-Properties</span> * | <span class="hljs-built_in">Select</span> Name,SamAccountName,Enabled<br><span class="hljs-built_in">Get-ADGroupMember</span> <span class="hljs-literal">-Identity</span> <span class="hljs-string">&quot;G_IT_Global&quot;</span><br><span class="hljs-built_in">Get-ADComputer</span> <span class="hljs-literal">-Filter</span> * | <span class="hljs-built_in">Select</span> Name,OperatingSystem<br><span class="hljs-built_in">Search-ADAccount</span> <span class="hljs-literal">-LockedOut</span><br><span class="hljs-built_in">Search-ADAccount</span> <span class="hljs-literal">-PasswordExpired</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="10-2-批次匯出稽核報表"><a href="#10-2-批次匯出稽核報表" class="headerlink" title="10-2 批次匯出稽核報表"></a>10-2 批次匯出稽核報表</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Get-ADUser</span> <span class="hljs-literal">-Filter</span> * <span class="hljs-literal">-Properties</span> LastLogonDate,PasswordLastSet |<br>  <span class="hljs-built_in">Select</span> Name,SamAccountName,LastLogonDate,PasswordLastSet |<br>  <span class="hljs-built_in">Export-Csv</span> <span class="hljs-string">&quot;C:\report.csv&quot;</span> <span class="hljs-literal">-NoTypeInformation</span> <span class="hljs-literal">-Encoding</span> UTF8<br></code></pre></td></tr></table></figure>
+
+<h3 id="10-3-批次建立-OU-群組（結構化腳本範例）"><a href="#10-3-批次建立-OU-群組（結構化腳本範例）" class="headerlink" title="10-3 批次建立 OU + 群組（結構化腳本範例）"></a>10-3 批次建立 OU + 群組（結構化腳本範例）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-variable">$depts</span> = <span class="hljs-selector-tag">@</span>(<span class="hljs-string">&quot;業務部&quot;</span>,<span class="hljs-string">&quot;研發部&quot;</span>,<span class="hljs-string">&quot;財務部&quot;</span>)<br><span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$d</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$depts</span>) &#123;<br>    <span class="hljs-built_in">New-ADOrganizationalUnit</span> <span class="hljs-literal">-Name</span> <span class="hljs-variable">$d</span> <span class="hljs-literal">-Path</span> <span class="hljs-string">&quot;DC=contoso,DC=local&quot;</span><br>    <span class="hljs-built_in">New-ADGroup</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;G_<span class="hljs-variable">$d</span>&quot;</span> <span class="hljs-literal">-GroupScope</span> Global <span class="hljs-literal">-GroupCategory</span> Security <span class="hljs-literal">-Path</span> <span class="hljs-string">&quot;OU=<span class="hljs-variable">$d</span>,DC=contoso,DC=local&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="階段-11：疑難排解工具熟練"><a href="#階段-11：疑難排解工具熟練" class="headerlink" title="階段 11：疑難排解工具熟練"></a>階段 11：疑難排解工具熟練</h2><h3 id="11-1-dcdiag-repadmin-常用組合"><a href="#11-1-dcdiag-repadmin-常用組合" class="headerlink" title="11-1 dcdiag &#x2F; repadmin 常用組合"></a>11-1 dcdiag &#x2F; repadmin 常用組合</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cmd">dcdiag /v /c /d /e /s:DC1<br>repadmin /replsummary<br>repadmin /showrepl DC1<br>repadmin /syncall /AdeP<br></code></pre></td></tr></table></figure>
+
+<h3 id="11-2-ADSI-Edit（查看-修改原始屬性）"><a href="#11-2-ADSI-Edit（查看-修改原始屬性）" class="headerlink" title="11-2 ADSI Edit（查看&#x2F;修改原始屬性）"></a>11-2 ADSI Edit（查看&#x2F;修改原始屬性）</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">adsiedit.msc<br></code></pre></td></tr></table></figure>
+<p>連接到 Default naming context → 展開找到物件 → 右鍵 Properties 直接修改 LDAP 屬性（如 msDS-* 屬性）</p>
+<h3 id="11-3-ldp-exe（LDAP-查詢）"><a href="#11-3-ldp-exe（LDAP-查詢）" class="headerlink" title="11-3 ldp.exe（LDAP 查詢）"></a>11-3 ldp.exe（LDAP 查詢）</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">ldp.exe<br></code></pre></td></tr></table></figure>
+<p>Connection → Connect（輸入 DC IP）→ Bind → View → Tree → 展開 DN 逐層檢查</p>
+<h3 id="11-4-事件記錄檢查重點"><a href="#11-4-事件記錄檢查重點" class="headerlink" title="11-4 事件記錄檢查重點"></a>11-4 事件記錄檢查重點</h3><p><code>eventvwr.msc</code> → Applications and Services Logs → Directory Service &#x2F; DNS Server；System log 篩選 Source: NETLOGON, Kerberos</p>
+<h2 id=""><a href="#" class="headerlink" title=":::"></a>:::</h2><h2 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h2><p>我現在從官方那邊拿到 Windows Server 2025 iso ，電腦改名為 DC01 了，然後設了固定 IP (IP: 192.168.19.10、Subnet mask: 255.255.255.0、Gateway: 192.168.19.2、DNS: 127.0.0.1)。現在裝ㄌ AD DS 角色 跟升級成網域控制站，Add a new fores 叫 yi.local（NetBIOS: YI），DSRM 密碼設定完成，然後要開始做 DC 端設定。</p>
+<h2 id="建立-Organizational-Unit-結構"><a href="#建立-Organizational-Unit-結構" class="headerlink" title="建立 Organizational Unit 結構"></a>建立 Organizational Unit 結構</h2><p>假設結構長這樣</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stata">yi.<span class="hljs-keyword">local</span><br>└── <span class="hljs-keyword">OU</span>: HQ（總部）<br>    ├── <span class="hljs-keyword">OU</span>: IT（資訊部）<br>    └── <span class="hljs-keyword">OU</span>: HR（人資部）<br></code></pre></td></tr></table></figure>
+<h3 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h3><p>Active Directory Users and Computers<br><img src="https://hackmd.io/_uploads/HksmsmrrGg.png" alt="image"><br>yi.local 按右鍵 → New → Organizational Unit<br><img src="https://hackmd.io/_uploads/SykZbNrHGg.png" alt="image"><br>Name 叫 HQ 然後 OK<br><img src="https://hackmd.io/_uploads/rkpps7rBMg.png" alt="image"><br>建好 HQ 之後，對著它按右鍵 → New → Organizational Unit 像剛剛一樣的方法建立其他項<br><img src="https://hackmd.io/_uploads/B1PnAXBSfx.png" alt="image"></p>
+<h3 id="PowerShell-寫法"><a href="#PowerShell-寫法" class="headerlink" title="PowerShell 寫法"></a>PowerShell 寫法</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada"><span class="hljs-keyword">New</span>-ADOrganizationalUnit -Name <span class="hljs-string">&quot;HQ&quot;</span> -Path <span class="hljs-string">&quot;DC=yi,DC=local&quot;</span> -ProtectedFromAccidentalDeletion $<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada"><span class="hljs-keyword">New</span>-ADOrganizationalUnit -Name <span class="hljs-string">&quot;IT&quot;</span> -Path <span class="hljs-string">&quot;OU=HQ,DC=yi,DC=local&quot;</span> -ProtectedFromAccidentalDeletion $<span class="hljs-literal">false</span><br><span class="hljs-keyword">New</span>-ADOrganizationalUnit -Name <span class="hljs-string">&quot;HR&quot;</span> -Path <span class="hljs-string">&quot;OU=HQ,DC=yi,DC=local&quot;</span> -ProtectedFromAccidentalDeletion $<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>-Name</code>：OU 的名稱</li>
+<li><code>-Path</code>：指定要建在哪個容器底下</li>
+<li><code>-ProtectedFromAccidentalDeletion $false</code>：對應 UI 裡「取消勾選保護」<ul>
+<li>防不小心刪掉用</li>
+<li>這邊練習環境會刪刪減減用所以不保護</li>
+</ul>
+</li>
+</ul>
+<p>驗證<br><img src="https://hackmd.io/_uploads/BkQLJErSfx.png" alt="image"></p>
+<h2 id="建立測試使用者帳號"><a href="#建立測試使用者帳號" class="headerlink" title="建立測試使用者帳號"></a>建立測試使用者帳號</h2><p>目標:<br>Emma.Wilson → 一般帳號建立後，加入 Domain Admins 群組<br>Isabella.Davis → 一般使用者帳號<br>然後丟到 IT 裡</p>
+<h3 id="GUI-1"><a href="#GUI-1" class="headerlink" title="GUI"></a>GUI</h3><p>以 Emma.Wilson 為例<br>Active Directory Users and Computers<br>IT 按右鍵 → New → User<br><img src="https://hackmd.io/_uploads/rJ3mHX8SGg.png" alt="image"><br><img src="https://hackmd.io/_uploads/S1ZO04Irfg.png" alt="image"><br>||P@ssw0rd2025!||<br><img src="https://hackmd.io/_uploads/SyYD1rUHGe.png" alt="image"></p>
+<h3 id="Powershell-寫法"><a href="#Powershell-寫法" class="headerlink" title="Powershell 寫法"></a>Powershell 寫法</h3><p>以 Isabella.Davis 為例</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><span class="hljs-keyword">New</span>-ADUser -Name <span class="hljs-string">&quot;Isabella Davis&quot;</span> `<br>    -GivenName <span class="hljs-string">&quot;Isabella&quot;</span> `<br>    -Surname <span class="hljs-string">&quot;Davis&quot;</span> `<br>    -SamAccountName <span class="hljs-string">&quot;Isabella.Davis&quot;</span> `<br>    -UserPrincipalName <span class="hljs-string">&quot;Isabella.Davis@yi.local&quot;</span> `<br>    -Path <span class="hljs-string">&quot;OU=IT,OU=HQ,DC=yi,DC=local&quot;</span> `<br>    -AccountPassword (ConvertTo-SecureString <span class="hljs-string">&quot;P@ssw0rd2026!&quot;</span> -AsPlainText -Force) `<br>    -Enabled $<span class="hljs-literal">true</span> `<br>    -PasswordNeverExpires $<span class="hljs-literal">true</span> `<br>    -ChangePasswordAtLogon $<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<p>驗證<br><img src="https://hackmd.io/_uploads/HkIExHLBfl.png" alt="image"></p>
+<hr>
+<h3 id="加-Domain-Admins"><a href="#加-Domain-Admins" class="headerlink" title="加 Domain Admins"></a>加 Domain Admins</h3><figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coq"><span class="hljs-keyword">Add</span>-ADGroupMember -<span class="hljs-keyword">Identity</span> <span class="hljs-string">&quot;Domain Admins&quot;</span> -Members <span class="hljs-string">&quot;Emma.Wilson&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">Get</span>-ADGroupMember -<span class="hljs-keyword">Identity</span> &quot;Domain Admins&quot; | <span class="hljs-keyword">Select</span>-<span class="hljs-keyword">Object</span> <span class="hljs-type">Name</span><br></code></pre></td></tr></table></figure>
+<p><img src="https://hackmd.io/_uploads/ryi3-S8HGe.png" alt="image"></p>
+<p>點兩下 Emma Wilson<br><img src="https://hackmd.io/_uploads/S1xagr8rfe.png" alt="image"><br>Member Of<br><img src="https://hackmd.io/_uploads/ByEkbB8rfe.png" alt="image"><br>Add..<br>Domain Admins<br><img src="https://hackmd.io/_uploads/HyWmbSLSze.png" alt="image"><br>Check Names → OK<br>Apply<br><img src="https://hackmd.io/_uploads/SJarZH8BMe.png" alt="image"></p>
+<h2 id="GPO"><a href="#GPO" class="headerlink" title="GPO"></a>GPO</h2><p><img src="https://hackmd.io/_uploads/SyN6Tr8rMe.png" alt="image"></p>
+<h3 id="GUI-2"><a href="#GUI-2" class="headerlink" title="GUI"></a>GUI</h3><p>Group Policy Management<br><img src="https://hackmd.io/_uploads/SJCDRBIrfg.png" alt="image"><br>Domain Controllers 右鍵 → Create a GPO in this domain, and Link it here…<br><img src="https://hackmd.io/_uploads/r1U7UI8BMe.png" alt="image">)<br>名字就叫 Deny Local Logon 吧!<br><img src="https://hackmd.io/_uploads/HyGCAr8Hze.png" alt="image"><br><img src="https://hackmd.io/_uploads/BJyuIU8Sze.png" alt="image"><br>右鍵 → Edit…<br>會跳出 Group Policy Management Editor<br><img src="https://hackmd.io/_uploads/rJS9L8ISfl.png" alt="image"><br>:::spoiler note</p>
+<ul>
+<li>Computer Configuration（電腦設定）：套用在「電腦」上的規則，不管誰登入這台電腦都生效</li>
+<li>User Configuration（使用者設定）：套用在「使用者帳號」上的規則，不管在哪台電腦登入都生效</li>
+</ul>
+<p>Deny Logon Locally（拒絕本機登入）屬於「電腦設定」底下的使用者權限指派，因為這個規則本質上是「限制某使用者能不能登入到這台&#x2F;這些電腦」，所以要走 Computer Configuration<br>:::<br>Computer Configuration -&gt; Policies -&gt; Windows Settings -&gt; Security Settings -&gt; Local Policies -&gt; User Rights Assignment<br>看 Deny log on locally<br><img src="https://hackmd.io/_uploads/H190LULHMx.png" alt="image"><br>Define these policy settings 打勾 -&gt; Add User or Group…<br><img src="https://hackmd.io/_uploads/BJiHML8Bze.png" alt="image"><br>Browse<br><img src="https://hackmd.io/_uploads/ByvVGUUHGl.png" alt="image"><br>Isabella.Davis -&gt; Check Names -&gt; OK<br><img src="https://hackmd.io/_uploads/SJZKG88Sfx.png" alt="image"><br><img src="https://hackmd.io/_uploads/H10jGUIrGl.png" alt="image"><br>OK<br><img src="https://hackmd.io/_uploads/BkXm4LIBMx.png" alt="image"><br><img src="https://hackmd.io/_uploads/B1rIvI8SGx.png" alt="image"></p>
+<h3 id="Powershell-寫法-1"><a href="#Powershell-寫法-1" class="headerlink" title="Powershell 寫法"></a>Powershell 寫法</h3><p>By claude 但它說GUI比較快所以我這邊Powershell 寫法應該不會特別記</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-comment"># 1. 建立並連結 GPO（跟之前一樣）</span><br><span class="hljs-built_in">New-GPO</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;Deny Local Logon - Isabella&quot;</span><br><span class="hljs-built_in">New-GPLink</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;Deny Local Logon - Isabella&quot;</span> <span class="hljs-literal">-Target</span> <span class="hljs-string">&quot;OU=Domain Controllers,DC=yi,DC=local&quot;</span><br><br><span class="hljs-comment"># 2. 取得該 GPO 在 SYSVOL 裡的實際路徑</span><br><span class="hljs-variable">$gpo</span> = <span class="hljs-built_in">Get-GPO</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">&quot;Deny Local Logon - Isabella&quot;</span><br><span class="hljs-variable">$gpoPath</span> = <span class="hljs-string">&quot;\\yi.local\SYSVOL\yi.local\Policies\&#123;<span class="hljs-variable">$</span>(<span class="hljs-variable">$gpo</span>.Id)&#125;\Machine\Microsoft\Windows NT\SecEdit&quot;</span><br><br><span class="hljs-comment"># 3. 建立目錄（如果不存在）</span><br><span class="hljs-built_in">New-Item</span> <span class="hljs-literal">-Path</span> <span class="hljs-variable">$gpoPath</span> <span class="hljs-literal">-ItemType</span> Directory <span class="hljs-literal">-Force</span> | <span class="hljs-built_in">Out-Null</span><br><br><span class="hljs-comment"># 4. 先取得 Isabella.Davis 的 SID</span><br><span class="hljs-variable">$sid</span> = (<span class="hljs-built_in">Get-ADUser</span> <span class="hljs-literal">-Identity</span> <span class="hljs-string">&quot;Isabella.Davis&quot;</span>).SID.Value<br><br><span class="hljs-comment"># 5. 寫入安全性範本內容（GptTmpl.inf）</span><br><span class="hljs-variable">$iniContent</span> = <span class="hljs-string">@&quot;</span><br><span class="hljs-string">[Unicode]</span><br><span class="hljs-string">Unicode=yes</span><br><span class="hljs-string">[Version]</span><br><span class="hljs-string">signature=&quot;`$CHICAGO`$&quot;</span><br><span class="hljs-string">Revision=1</span><br><span class="hljs-string">[Privilege Rights]</span><br><span class="hljs-string">SeDenyInteractiveLogonRight = *<span class="hljs-variable">$sid</span></span><br><span class="hljs-string">&quot;@</span><br><span class="hljs-built_in">Set-Content</span> <span class="hljs-literal">-Path</span> <span class="hljs-string">&quot;<span class="hljs-variable">$gpoPath</span>\GptTmpl.inf&quot;</span> <span class="hljs-literal">-Value</span> <span class="hljs-variable">$iniContent</span> <span class="hljs-literal">-Encoding</span> Unicode<br><br><span class="hljs-comment"># 6. 更新 GPO 版本號，讓系統知道內容有變更（觸發套用）</span><br><span class="hljs-variable">$gpo</span> | <span class="hljs-built_in">Set-GPO</span> <span class="hljs-literal">-Description</span> <span class="hljs-string">&quot;Deny logon locally updated via script&quot;</span><br><br><span class="hljs-comment"># 7. 立即刷新群組原則</span><br>gpupdate /force<br></code></pre></td></tr></table></figure>
+<h2 id="改-AdminSDHolder-本身的-ACL"><a href="#改-AdminSDHolder-本身的-ACL" class="headerlink" title="改 AdminSDHolder 本身的 ACL"></a>改 AdminSDHolder 本身的 ACL</h2><p><img src="https://hackmd.io/_uploads/Hygc2I8Hfe.png" alt="image"><br>直接改 Emma.Wilson 的 ACL 沒用因為 SDProp 把 AdminSDHolder 上的權限範本，強制覆蓋貼到這些成員帳號自己的 ACL 上，所以直接改 60 分鐘後就會打回原形</p>
+<ul>
+<li>ACL: Access Control List，存取控制清單</li>
+</ul>
+<h3 id="GUI-3"><a href="#GUI-3" class="headerlink" title="GUI"></a>GUI</h3><p>ADSI Edit<br><img src="https://hackmd.io/_uploads/rkLNlPLSfl.png" alt="image"><br>右鍵 → Connect to…<br><img src="https://hackmd.io/_uploads/rJfwxvUSGx.png" alt="image"><br>就直接預設不改任何東西<br>Default naming context → OK<br><img src="https://hackmd.io/_uploads/Sy2sgDUHMe.png" alt="image"><br>DC&#x3D;yi,DC&#x3D;local → CN&#x3D;System → CN&#x3D;AdminSDHolder<br><img src="https://hackmd.io/_uploads/ByvWZDIBGe.png" alt="image"><br>右鍵 → Properties 看 Security 點 Add…<br><img src="https://hackmd.io/_uploads/r1OcWwLHMl.png" alt="image"><br>Domain Users → Check Names → OK<br><img src="https://hackmd.io/_uploads/SkgWMP8rfe.png" alt="image"><br>Apply → OK</p>
+<h2 id="LAPS"><a href="#LAPS" class="headerlink" title="LAPS"></a>LAPS</h2><p><img src="https://hackmd.io/_uploads/HyjW7wLrfl.png" alt="image"><br>擴充 AD Schema</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-built_in">Update</span><span class="hljs-operator">-</span><span class="hljs-variable">LapsADSchema</span> <span class="hljs-operator">-</span><span class="hljs-built_in">Confirm</span><span class="hljs-operator">:</span><span class="hljs-variable">$false</span><br></code></pre></td></tr></table></figure>
+<p>讓這個 OU 底下的電腦帳號擁有寫入自己 ms-LAPS-Password 等屬性的權限</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coq"><span class="hljs-keyword">Set</span>-LapsADComputerSelfPermission -<span class="hljs-keyword">Identity</span> <span class="hljs-string">&quot;OU=Domain Controllers,DC=yi,DC=local&quot;</span><br></code></pre></td></tr></table></figure>
+<p>Group Policy Management<br>Domain Controllers 右鍵 → Create a GPO in this domain, and Link it here…<br><img src="https://hackmd.io/_uploads/Sk-7vvLBGl.png" alt="image"><br>叫 LAPS Policy 好了<br><img src="https://hackmd.io/_uploads/BksBwD8HMl.png" alt="image"><br>右鍵 Edit<br>Computer Configuration → Policies → Administrative Templates → System → LAPS<br><img src="https://hackmd.io/_uploads/HJk1dvUHfg.png" alt="image"><br>點兩下 Password settings 然後 Enable 後根據題目要的去改<br><img src="https://hackmd.io/_uploads/SyWwdwISzg.png" alt="image"><br>Configure password backup directory<br>選 Enabled → Active Directory<br><img src="https://hackmd.io/_uploads/Sk_8cvLHMx.png" alt="image"><br>預設是 Azure AD，這樣密碼會存到微軟雲端的 Entra ID，需要額外的雲端訂閱、網路連線到 Azure，但現在純本地端所以用 AD<br><img src="https://hackmd.io/_uploads/rJf12P8Sze.png" alt="image"><br><img src="https://hackmd.io/_uploads/HJDJJ_USGl.png" alt="image"></p>
+<hr>
+<h3 id="相似題目補充"><a href="#相似題目補充" class="headerlink" title="相似題目補充"></a>相似題目補充</h3><ul>
+<li><p>一般使用者改這些密碼設定是在 &#x3D;&#x3D;Default Domain Policy&#x3D;&#x3D;<br>Computer Configuration → Policies → Windows Settings → Security Settings → Account Policies → Password Policy</p>
+</li>
+<li><p>Domain Admins 密碼原則用 Active Directory Administrative Center<br>yi (local) → System → Password Settings Container</p>
+</li>
+</ul>
+
+        </div>
+        
+            <div class="post-container">
+            <aside class="toc-container">
+                <button class="toc-toggle">文章目錄</button>
+                <nav class="toc" id="toc"></nav>
+            </aside>
+        </div>
+        
+    </div>
+
+
+    <!-- 返回主頁連結 -->
+    <div class="text-center my-8">
+        <a href="/" class="text-hacker-color1 underline hover:text-hacker-color2">← Back to Home</a>
+    </div>
+
+      
+      <script src="/js/toc.js"></script>  <!-- 引入 TOC 邏輯 -->
+      
+      
+
+    <footer class="bg-black text-gray-400 py-4">
+    <div class="container mx-auto text-center">
+      <p>© <span id="current-year"></span>  Yiwen 
+        <br> Powered by <a class="hover:text-white duration-150 hover:underline decoration-slice" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a class="hover:text-white duration-150 hover:underline decoration-slice" target="_blank" rel="noopener" href="https://github.com/m310ct/hexo-theme-hexploit">Hexpolit</a></p>
+        <br> 這個 blog 運行了 <span id="running-time"></span>
+        <br> 訪客數 <span id="busuanzi_value_site_uv"></span> | 瀏覽數 <span id="busuanzi_value_site_pv"></span>
+    </div>
+  </footer>
+  
+  <script> 
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+  
+  <script src="/js/timer.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
